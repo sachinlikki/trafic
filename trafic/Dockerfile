@@ -1,5 +1,5 @@
 # Use official Tomcat 10.1 base image
-FROM tomcat:10.1-jdk24
+FROM tomcat:10.1-jdk21
 
 # Remove default web apps
 RUN rm -rf /usr/local/tomcat/webapps/*
@@ -22,4 +22,5 @@ EXPOSE 8082
 
 # Start Tomcat
 CMD ["catalina.sh", "run"]
+
 
